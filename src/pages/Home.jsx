@@ -1,35 +1,38 @@
 import Navbar from "../components/Navbar";
+import About from "./About";
+import Skills from "./Skills";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
     <div className="home">
+      {/* =========================
+          BACKGROUND
+      ========================== */}
 
-      {/* Background glow */}
       <div className="home-glow"></div>
       <div className="home-glow-secondary"></div>
 
-      {/* Navbar */}
+      {/* =========================
+          NAVBAR
+      ========================== */}
+
       <Navbar />
 
-      {/* Hero */}
+      {/* =========================
+          HERO SECTION
+      ========================== */}
+
       <main className="hero">
-
         <section className="hero-content">
-
           {/* Greeting */}
-          <p className="hero-greeting">
-            Hi! I'm
-          </p>
+          <p className="hero-greeting">Hi! I'm</p>
 
           {/* Name */}
-          <h1 className="hero-name">
-            Aryan Mestry
-          </h1>
+          <h1 className="hero-name">Aryan Mestry</h1>
 
           {/* Role */}
-          <p className="hero-role">
-            AI/ML Enthusiast & Full-Stack Developer
-          </p>
+          <p className="hero-role">AI/ML Enthusiast & Full-Stack Developer</p>
 
           {/* Description */}
           <p className="hero-description">
@@ -38,41 +41,45 @@ function Home() {
           </p>
 
           {/* Buttons */}
-          <div className="hero-actions">
+        <div className="hero-actions">
+  <Link to="/projects" className="primary-button">
+    Explore My Work
+  </Link>
+  <a
+    href="https://github.com/aryanmestry07"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="secondary-button"
+  >
+    GitHub ↗
+  </a>
+</div>
 
-            <a
-              href="/projects"
-              className="primary-button"
-            >
-              View My Projects
-            </a>
+          {/* Scroll Indicator */}
+          <a
+            href="#about"
+            className="scroll-indicator"
+            aria-label="Scroll to About Me"
+          >
+            <span className="scroll-text">Scroll to explore</span>
 
-            <a
-              href="https://github.com/aryanmestry07"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="secondary-button"
-            >
-              GitHub ↗
-            </a>
-
-          </div>
-
-          {/* Scroll indicator */}
-          <div className="scroll-indicator">
-
-            <span className="scroll-text">
-              Scroll to explore
+            <span className="scroll-arrow">
+              <span></span>
             </span>
-
-            <span className="scroll-line"></span>
-
-          </div>
-
+          </a>
         </section>
-
       </main>
 
+      {/* =========================
+          ABOUT SECTION
+      ========================== */}
+
+      <About embedded />
+      {/* =========================
+    SKILLS SECTION
+========================== */}
+
+      <Skills embedded />
     </div>
   );
 }

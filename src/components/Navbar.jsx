@@ -1,46 +1,24 @@
+import { Link } from "react-router-dom";
+
 function Navbar() {
   return (
     <nav className="navbar">
-
       <div className="navbar-inner">
-
-        {/* Logo */}
-        <a href="/" className="nav-logo">
+        <Link to="/" className="nav-logo">
           Aryan<span>.</span>
-        </a>
+        </Link>
 
-        {/* Navigation */}
         <div className="nav-links">
-
-          <a href="/" className="nav-link">
-            Home
-          </a>
-
-          <a href="/about" className="nav-link">
-            About
-          </a>
-
-          <a href="/projects" className="nav-link">
-            Projects
-          </a>
-
-          <a href="/skills" className="nav-link">
-            Skills
-          </a>
-
-          <a href="/contact" className="nav-link">
-            Contact
-          </a>
-
+          <Link to="/" className="nav-link">Home</Link>
+          <Link to="/about" className="nav-link">About</Link>
+          <Link to="/projects" className="nav-link">Projects</Link>
+          <Link to="/skills" className="nav-link">Skills</Link>
         </div>
 
-        {/* Resume */}
-        <a href="#" className="resume-button">
+        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="resume-button">
           Resume
         </a>
-
       </div>
-
     </nav>
   );
 }
