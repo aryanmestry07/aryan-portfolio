@@ -4,30 +4,47 @@ function Skills({ embedded = false }) {
   const skillCategories = [
     {
       number: "01",
-      title: "Programming",
-      tags: ["Python", "JavaScript", "SQL", "C++"]
+      title: "Programming & Databases",
+      tags: ["Python", "SQL", "JavaScript", "MySQL"]
     },
     {
       number: "02",
-      title: "AI / ML",
-      tags: ["Machine Learning", "Scikit-learn", "EDA", "Data Analysis"]
+      title: "AI & Machine Learning",
+      tags: [
+        "Scikit-learn",
+        "Supervised Learning",
+        "Classification & Regression",
+        "Feature Engineering",
+        "Model Evaluation",
+        "Hyperparameter Tuning"
+      ]
     },
     {
       number: "03",
-      title: "Full Stack",
-      tags: ["React", "Django", "FastAPI", "REST APIs", "Tailwind CSS"]
+      title: "Deep Learning & Generative AI",
+      tags: [
+        "PyTorch",
+        "Artificial Neural Networks (ANN/FNN)",
+        "Neural Network Fundamentals",
+        "Retrieval-Augmented Generation (RAG)"
+      ]
     },
     {
       number: "04",
-      title: "Data & Tools",
-      tags: ["Pandas", "NumPy", "MySQL", "Git", "GitHub"]
+      title: "Data Science & Development Tools",
+      tags: [
+        "Pandas, NumPy, Matplotlib",
+        "Data Preprocessing & Cleaning",
+        "Exploratory Data Analysis (EDA)",
+        "Django, FastAPI, REST APIs",
+        "HTML, CSS, Bootstrap",
+        "Git, GitHub, Jupyter Notebook, Google Colab, VS Code"
+      ]
     }
   ];
 
   return (
-    <section id={embedded ? "skills" : undefined} className="skills-page">
-      <div className="skills-glow"></div>
-
+    <section id={embedded ? "skills" : undefined} className="skills-section">
       {!embedded && <Navbar />}
 
       <main className="skills-container">
@@ -39,7 +56,7 @@ function Skills({ embedded = false }) {
           </h1>
 
           <p className="skills-intro">
-            Technologies and frameworks I use to build scalable systems, machine learning models, and user interfaces.
+            Technologies, machine learning pipelines, and frameworks I use to build scalable systems and intelligent applications.
           </p>
         </div>
 
